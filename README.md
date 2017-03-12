@@ -1,44 +1,8 @@
 # Microbit-motor
-# Simple micro python script to control a hacked lego motor with a microbit and kiktronic motor board
+Simple micro python script to control a hacked lego motor with a microbit and kiktronic motor board, powered through a mobile phone charger with hacked USB cable
 
-from microbit import *
+Kiktronic motor board details here https://www.kitronik.co.uk/pdf/5620%20Motor%20Driver%20Board%20V1.1-2.pdf
 
-def motor1( command ):
-    "Tell the motor 1 output to do command"
-    
-    if command == 'go':
-        pin8.write_digital(1)
-        pin12.write_digital(0)
-    elif command == 'back':
-        pin8.write_digital(0)
-        pin12.write_digital(1)
-    elif command == 'stop':
-        pin8.write_digital(0)
-        pin12.write_digital(0)      
-    
-    return
+How to hack lego motor wires here https://scuttlebots.com/2014/03/02/lego-pf-hacking-wiring/
 
-def forward():
-    motor1('go')
-    display.show(Image.ARROW_N)
-    sleep(2000)
-    motor1('stop')
-    return
-
-def reverse():
-    motor1('back')
-    display.show(Image.ARROW_S)
-    sleep(2000)
-    motor1('stop')
-    return 
-    
-while True:
-    display.show(Image.HEART)
-    sleep(2000)
-    while True:
-        if button_a.was_pressed():
-            forward()
-        elif button_b.was_pressed():
-            reverse()
-        display.show(Image.HEART)
-        sleep(100)
+How to hack USB cable here http://www.instructables.com/id/Hack-that-holy-USB-cable/?ALLSTEPS
