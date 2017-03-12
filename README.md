@@ -1,5 +1,5 @@
 # Microbit-motor
-Simple micro python script to control a hacked lego motor with a microbit and kiktronic motor board, powered through a mobile phone charger with hacked USB cable
+Micro python script to control a hacked lego motor with a microbit and kiktronic motor board, powered through a mobile phone charger with hacked USB cable
 
 Kiktronic motor board details here https://www.kitronik.co.uk/pdf/5620%20Motor%20Driver%20Board%20V1.1-2.pdf
 
