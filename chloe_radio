@@ -1,4 +1,4 @@
-# This script doesn't work with moto_radio2: there are no errors and the visuals on this microbit display but it doesn't 
+# This script doesn't work with motor_radio: there are no errors and the visuals on this microbit display but it doesn't 
 # seem to send strings via radio to the other microbit
 
 import radio
