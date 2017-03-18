@@ -1,0 +1,11 @@
+#this script does work, taken frmo http://www.suppertime.co.uk/blogmywiki/2016/11/microbit-radio/
+
+import radio
+from microbit import *
+radio.on()
+
+while True:
+    incoming = radio.receive()
+    if incoming:
+        display.scroll(incoming)
+    sleep(100)
