@@ -1,0 +1,14 @@
+#this script does send the messages, taken from http://www.suppertime.co.uk/blogmywiki/2016/11/microbit-radio/
+
+import radio
+from microbit import *
+radio.on()
+
+while True:
+    if button_a.was_pressed():
+        display.show('A')
+        radio.send('Who are you?')
+    if button_b.was_pressed():
+        display.show('B')
+        radio.send('My name is Paul')
+    sleep(100)
