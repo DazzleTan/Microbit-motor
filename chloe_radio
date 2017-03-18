@@ -1,0 +1,25 @@
+#this script doesn't work!
+
+from microbit import *
+import radio
+
+radio.on()
+
+while True:
+    display.show(Image.HEART_SMALL)
+    sleep(1000)
+    radio.receive()
+    incoming = radio.receive()
+    if incoming:
+        display.scroll(incoming)
+    while True:
+        if button_a.was_pressed():
+            display.show('A')
+            sleep(2000)
+            radio.send("hi")
+        elif button_b.was_pressed():
+            display.show('B')
+            sleep(2000)
+            radio.send('U ok?')
+        else:
+            display.show(Image.HEART_SMALL)
