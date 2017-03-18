@@ -1,4 +1,4 @@
-#this script doesn't send the radio messages
+# this script doesn't receive the radio messages from chloe_radio...
 
 from microbit import *
 import radio
@@ -33,21 +33,18 @@ def reverse():
     sleep(2000)
     motor1('stop')
     return 
-    
+
+incoming = radio.receive()
+
 while True:
-    display.show(Image.HEART)
-    sleep(1000)
-    radio.receive()
-    incoming = radio.receive()
+
     if incoming:
         display.scroll(incoming)
+        sleep(5000)
+        display.show(Image.HEART)
         sleep(2000)
-    radio.send("hello to you too!")
-    
     while True:
         if button_a.was_pressed():
             forward()
         elif button_b.was_pressed():
             reverse()
-        display.show(Image.HEART)
-        sleep(2000)
