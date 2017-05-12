@@ -16,7 +16,6 @@ chloe_radio.py is the attempt to use the second microbit (the name is because it
 radio_motor2.py is a way to send messages that does work taken from http://www.suppertime.co.uk/blogmywiki/2016/11/microbit-radio/
 chloe_radio2.py is a script that successfuly receives messages, taken from the same site.
 
-![pic](/IMG_7250.JPG)
 ![pic2](/IMG_7251.JPG)
 ![pic3](/IMG_7248.JPG)
 ![pic4](/IMG_7249.JPG)
